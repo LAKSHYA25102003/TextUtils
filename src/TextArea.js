@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./TextArea.css";
 
-function TextArea() {
+function TextArea(props) {
 
     const handleUpClick = () => {
         let newText = text.toUpperCase();
@@ -23,10 +23,12 @@ function TextArea() {
     const [text, setText] = useState("");
     return (
         <>
-            <div className='TextArea container my-4'>
+            <div className='TextArea container my-4' style={{color:props.mode==="dark"?"white":"black"}}>
                 <h3>Convert Lowercase to Uppercase and Vice-Versa</h3>
                 <div className="mb-3">
-                    <textarea className="form-control" id="exampleFormControlTextarea1" value={text} rows="8" onChange={handleChange}></textarea>
+                    <textarea style={{
+                backgroundColor:props.mode==="dark"?"gray":"white",
+                color:props.mode==="dark"?"white":"black"}} className="form-control" id="exampleFormControlTextarea1" value={text} rows="8" onChange={handleChange}></textarea>
                 </div>
 
 
@@ -38,13 +40,13 @@ function TextArea() {
                 <button type="button" class="btn btn-primary" onClick={handleLowerClick}>Convert to LowerCase</button>
                 <button type="button" class="btn btn-primary" onClick={handleClearClick}>Clear Text</button>
             </div>
-            <div className="container">
+            <div className="container" style={{color:props.mode==="dark"?"white":"black"}}>
                 <h3>Your text summary</h3>
                 <p>Total Words:{text.split(" ").length} Total Characters:{text.length}</p>
             </div>
-            <div className='container'>
+            <div className='container' style={{color:props.mode==="dark"?"white":"black"}}>
                 <h3>Preview</h3>
-                <p>{text}</p>
+                <p>{text.length>0?text:"Enter something in text box to preview here.."}</p>
             </div>
         </>
     )
