@@ -29,7 +29,7 @@ function Navbar(props) {
                         </ul>
                         <div className={`form-check form-switch text-${props.checkState}`}>
                             <input className="form-check-input" onClick={props.changeMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                            <label className="form-check-label"  for="flexSwitchCheckDefault">{props.checkText}</label>
+                            <label className="form-check-label"  htmlFor="flexSwitchCheckDefault">{props.checkText}</label>
                         </div>
                     </div>
                 </div>

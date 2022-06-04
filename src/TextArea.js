@@ -34,9 +34,9 @@ function TextArea(props) {
             </div>
 
             <div className="container">
-                <button type="button" class="btn btn-primary" onClick={handleUpClick}>Convert to UpperCase</button>
-                <button type="button" class="btn btn-primary" onClick={handleLowerClick}>Convert to LowerCase</button>
-                <button type="button" class="btn btn-primary" onClick={handleClearClick}>Clear Text</button>
+                <button type="button" className="btn btn-primary" onClick={handleUpClick}>Convert to UpperCase</button>
+                <button type="button" className="btn btn-primary" onClick={handleLowerClick}>Convert to LowerCase</button>
+                <button type="button" className="btn btn-primary" onClick={handleClearClick}>Clear Text</button>
             </div>
             <div className="container" style={{ color: props.mode === "dark" ? "white" : "black" }}>
                 <h3>Your text summary</h3>

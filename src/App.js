@@ -1,4 +1,3 @@
-import './App.css';
 import React,{useState} from 'react';
 import Navbar from './Navbar'
 import TextArea from './TextArea';
